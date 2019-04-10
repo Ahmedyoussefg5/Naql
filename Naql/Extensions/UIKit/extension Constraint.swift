@@ -225,9 +225,28 @@ extension UIView {
         return consWidth
     }
     
-    func constrainHeight(constant: CGFloat) {
+    @discardableResult
+    func topAnchorSuperView(constant: CGFloat) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: constant).isActive = true
+        let consWidth = topAnchor.constraint(equalTo: (superview?.topAnchor)!, constant: constant)
+        consWidth.isActive = true
+        return consWidth
+    }
+    
+    @discardableResult
+    func heightAnchorConstant(constant: CGFloat) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let cons = heightAnchor.constraint(equalToConstant: constant)
+        cons.isActive = true
+        return cons
+    }
+    
+    @discardableResult
+    func widthAnchorConstant(constant: CGFloat) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let cons = widthAnchor.constraint(equalToConstant: constant)
+        cons.isActive = true
+        return cons
     }
 }
 

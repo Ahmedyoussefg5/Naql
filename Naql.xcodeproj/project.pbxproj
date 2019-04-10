@@ -18,6 +18,13 @@
 		E81ABFC0225E01560016ACF6 /* RefuseMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFBF225E01560016ACF6 /* RefuseMessageViewController.swift */; };
 		E81ABFC5225E04C90016ACF6 /* IncomeRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFC4225E047E0016ACF6 /* IncomeRequestsViewController.swift */; };
 		E81ABFC7225E09F60016ACF6 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFC6225E09F50016ACF6 /* PickerViewController.swift */; };
+		E81ABFCA225E12820016ACF6 /* AccountStatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFC9225E12360016ACF6 /* AccountStatementViewController.swift */; };
+		E81ABFCD225E12A90016ACF6 /* MyRequestsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFCC225E12A90016ACF6 /* MyRequestsTableCell.swift */; };
+		E81ABFD2225E2D0E0016ACF6 /* PaymentProveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFD1225E2D0E0016ACF6 /* PaymentProveView.swift */; };
+		E81ABFD3225E2DF30016ACF6 /* PaymentProveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFCF225E2CD40016ACF6 /* PaymentProveViewController.swift */; };
+		E81ABFD6225E3B0C0016ACF6 /* BankAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFD5225E3AFE0016ACF6 /* BankAccountsViewController.swift */; };
+		E81ABFD9225E3FC70016ACF6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFD8225E3FA90016ACF6 /* PaymentViewController.swift */; };
+		E81ABFDC225E45770016ACF6 /* VisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFDB225E45770016ACF6 /* VisaViewController.swift */; };
 		E89E9B62225C87E200984908 /* CurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E9B61225C87E200984908 /* CurvedView.swift */; };
 		E89E9B64225C905800984908 /* NewRequestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E9B63225C905800984908 /* NewRequestViews.swift */; };
 		E89E9B66225C90B000984908 /* NewRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E9B65225C90B000984908 /* NewRequestView.swift */; };
@@ -79,6 +86,13 @@
 		E81ABFBF225E01560016ACF6 /* RefuseMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuseMessageViewController.swift; sourceTree = "<group>"; };
 		E81ABFC4225E047E0016ACF6 /* IncomeRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeRequestsViewController.swift; sourceTree = "<group>"; };
 		E81ABFC6225E09F50016ACF6 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		E81ABFC9225E12360016ACF6 /* AccountStatementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStatementViewController.swift; sourceTree = "<group>"; };
+		E81ABFCC225E12A90016ACF6 /* MyRequestsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestsTableCell.swift; sourceTree = "<group>"; };
+		E81ABFCF225E2CD40016ACF6 /* PaymentProveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProveViewController.swift; sourceTree = "<group>"; };
+		E81ABFD1225E2D0E0016ACF6 /* PaymentProveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProveView.swift; sourceTree = "<group>"; };
+		E81ABFD5225E3AFE0016ACF6 /* BankAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountsViewController.swift; sourceTree = "<group>"; };
+		E81ABFD8225E3FA90016ACF6 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		E81ABFDB225E45770016ACF6 /* VisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaViewController.swift; sourceTree = "<group>"; };
 		E89E9B61225C87E200984908 /* CurvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
 		E89E9B63225C905800984908 /* NewRequestViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestViews.swift; sourceTree = "<group>"; };
 		E89E9B65225C90B000984908 /* NewRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestView.swift; sourceTree = "<group>"; };
@@ -199,6 +213,56 @@
 			path = IncomeRequests;
 			sourceTree = "<group>";
 		};
+		E81ABFC8225E12110016ACF6 /* AccountStatement */ = {
+			isa = PBXGroup;
+			children = (
+				E81ABFC9225E12360016ACF6 /* AccountStatementViewController.swift */,
+			);
+			path = AccountStatement;
+			sourceTree = "<group>";
+		};
+		E81ABFCB225E12950016ACF6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E81ABFCC225E12A90016ACF6 /* MyRequestsTableCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E81ABFCE225E2CBB0016ACF6 /* PaymentProve */ = {
+			isa = PBXGroup;
+			children = (
+				E81ABFD1225E2D0E0016ACF6 /* PaymentProveView.swift */,
+				E81ABFCF225E2CD40016ACF6 /* PaymentProveViewController.swift */,
+			);
+			path = PaymentProve;
+			sourceTree = "<group>";
+		};
+		E81ABFD4225E3A580016ACF6 /* BankAccounts */ = {
+			isa = PBXGroup;
+			children = (
+				E81ABFD5225E3AFE0016ACF6 /* BankAccountsViewController.swift */,
+			);
+			path = BankAccounts;
+			sourceTree = "<group>";
+		};
+		E81ABFD7225E3F9E0016ACF6 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				E81ABFDA225E45600016ACF6 /* Visa */,
+				E81ABFD8225E3FA90016ACF6 /* PaymentViewController.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		E81ABFDA225E45600016ACF6 /* Visa */ = {
+			isa = PBXGroup;
+			children = (
+				E81ABFDB225E45770016ACF6 /* VisaViewController.swift */,
+			);
+			path = Visa;
+			sourceTree = "<group>";
+		};
 		E89E9B67225C90ED00984908 /* MakeNewRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,10 +293,11 @@
 		E8AE489B225AA0A1003B3215 /* Naql */ = {
 			isa = PBXGroup;
 			children = (
+				E81ABFCB225E12950016ACF6 /* Cell */,
 				E8BC9811225AE2D400C52EC5 /* Extensions */,
 				E8BC9855225AE64300C52EC5 /* CustomView */,
 				E8BC984C225AE49300C52EC5 /* Helper */,
-				E8BC9831225AE36A00C52EC5 /* ViewControllers */,
+				E8BC9831225AE36A00C52EC5 /* Scenes */,
 				E8BC980A225AE2A900C52EC5 /* Fonts */,
 				E8AE489C225AA0A1003B3215 /* AppDelegate.swift */,
 				E89E9B69225CA75C00984908 /* DLAppDelegate.h */,
@@ -262,10 +327,10 @@
 		E8BC9811225AE2D400C52EC5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E8BC9802225AB8B500C52EC5 /* ViewController+.swift */,
 				E8BC984B225AE3DC00C52EC5 /* Gradiant */,
 				E8BC9825225AE2D400C52EC5 /* UIKit */,
 				E8BC981A225AE2D400C52EC5 /* extension Sequence */,
-				E8BC9802225AB8B500C52EC5 /* ViewController+.swift */,
 				E8BC9812225AE2D400C52EC5 /* DecodingJsonFromBundle.swift */,
 				E8BC9813225AE2D400C52EC5 /* extension Array.swift */,
 				E8BC9814225AE2D400C52EC5 /* extension Bool.swift */,
@@ -313,9 +378,13 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		E8BC9831225AE36A00C52EC5 /* ViewControllers */ = {
+		E8BC9831225AE36A00C52EC5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E81ABFD7225E3F9E0016ACF6 /* Payment */,
+				E81ABFD4225E3A580016ACF6 /* BankAccounts */,
+				E81ABFCE225E2CBB0016ACF6 /* PaymentProve */,
+				E81ABFC8225E12110016ACF6 /* AccountStatement */,
 				E81ABFC3225E046A0016ACF6 /* IncomeRequests */,
 				E81ABFB5225DDF7D0016ACF6 /* RequsetsDetails */,
 				E81ABFAE225CC1360016ACF6 /* MyRequests */,
@@ -323,7 +392,7 @@
 				E8BC9808225ADCC500C52EC5 /* SideMenuTableViewController.swift */,
 				E8AE489E225AA0A1003B3215 /* HomeViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		E8BC984B225AE3DC00C52EC5 /* Gradiant */ = {
@@ -480,10 +549,13 @@
 				E81ABFB9225DDFF50016ACF6 /* RequestDetailsView.swift in Sources */,
 				E8BC9847225AE3C800C52EC5 /* extension+TableView+CollectionView.swift in Sources */,
 				E8BC9849225AE3C800C52EC5 /* extension+UILabel.swift in Sources */,
+				E81ABFD2225E2D0E0016ACF6 /* PaymentProveView.swift in Sources */,
 				E81ABFC5225E04C90016ACF6 /* IncomeRequestsViewController.swift in Sources */,
 				E8BC9842225AE3C800C52EC5 /* extension Date.swift in Sources */,
+				E81ABFD9225E3FC70016ACF6 /* PaymentViewController.swift in Sources */,
 				E8BC9834225AE3B200C52EC5 /* extension UIButton.swift in Sources */,
 				E8BC9844225AE3C800C52EC5 /* extension Optional.swift in Sources */,
+				E81ABFCD225E12A90016ACF6 /* MyRequestsTableCell.swift in Sources */,
 				E8BC9843225AE3C800C52EC5 /* extension Int.swift in Sources */,
 				E8BC9845225AE3C800C52EC5 /* extension String.swift in Sources */,
 				E8AE489F225AA0A1003B3215 /* HomeViewController.swift in Sources */,
@@ -494,6 +566,7 @@
 				E8BC9803225AB8B500C52EC5 /* ViewController+.swift in Sources */,
 				E8AE489D225AA0A1003B3215 /* AppDelegate.swift in Sources */,
 				E81ABFB4225CC5380016ACF6 /* Constants.swift in Sources */,
+				E81ABFDC225E45770016ACF6 /* VisaViewController.swift in Sources */,
 				E8BC983A225AE3B200C52EC5 /* extension UIView.swift in Sources */,
 				E81ABFC7225E09F60016ACF6 /* PickerViewController.swift in Sources */,
 				E89E9B64225C905800984908 /* NewRequestViews.swift in Sources */,
@@ -502,11 +575,13 @@
 				E8BC983E225AE3C800C52EC5 /* extension Array.swift in Sources */,
 				E81ABFC0225E01560016ACF6 /* RefuseMessageViewController.swift in Sources */,
 				E8BC9848225AE3C800C52EC5 /* extension+UIColor+UIFonts.swift in Sources */,
+				E81ABFD6225E3B0C0016ACF6 /* BankAccountsViewController.swift in Sources */,
 				E81ABFB0225CC1620016ACF6 /* MyRequestsViewController.swift in Sources */,
 				E8FE7831225B53E1008CFF87 /* NewRequestsViewController.swift in Sources */,
 				E89E9B6B225CA75C00984908 /* DLAppDelegate.m in Sources */,
 				E89E9B66225C90B000984908 /* NewRequestView.swift in Sources */,
 				E8BC9807225AC0D000C52EC5 /* extension+Gradient.swift in Sources */,
+				E81ABFCA225E12820016ACF6 /* AccountStatementViewController.swift in Sources */,
 				E8BC9840225AE3C800C52EC5 /* extension CALayer.swift in Sources */,
 				E8BC9809225ADCC500C52EC5 /* SideMenuTableViewController.swift in Sources */,
 				E8BC9838225AE3B200C52EC5 /* extension UINavigationBar.swift in Sources */,
@@ -516,6 +591,7 @@
 				E8BC9833225AE3B200C52EC5 /* extension UIAlertController.swift in Sources */,
 				E8BC9839225AE3B200C52EC5 /* extension UITextField.swift in Sources */,
 				E8BC984A225AE3C800C52EC5 /* NotificationCenter.swift in Sources */,
+				E81ABFD3225E2DF30016ACF6 /* PaymentProveViewController.swift in Sources */,
 				E8BC984E225AE4A800C52EC5 /* AppLanguage.swift in Sources */,
 				E8BC9846225AE3C800C52EC5 /* extension UINavigationController.swift in Sources */,
 				E8BC983F225AE3C800C52EC5 /* extension Bool.swift in Sources */,

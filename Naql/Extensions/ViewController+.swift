@@ -104,12 +104,12 @@ extension UIViewController {
     }
     
     func setStatusBarBackgroundColor(colors: [UIColor]) {
-        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
-        let gradientLayer = CAGradientLayer(frame: statusBar.frame, colors: colors)
-        let img = gradientLayer.creatGradientImage()
-        let imgView = UIImageView(image: img)
-        statusBar.addSubview(imgView)
-        imgView.fillSuperview()
+//        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+//        let gradientLayer = CAGradientLayer(frame: statusBar.frame, colors: colors)
+//        let img = gradientLayer.creatGradientImage()
+//        let imgView = UIImageView(image: img)
+//        statusBar.addSubview(imgView)
+//        imgView.fillSuperview()
     }
     
     func interactionConfig(with indicator: UIActivityIndicatorView?, to status: Bool) {

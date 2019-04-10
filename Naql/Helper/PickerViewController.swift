@@ -44,6 +44,9 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let picker = UIPickerView()
 //        picker.backgroundColor = .gray
         picker.translatesAutoresizingMaskIntoConstraints = false
+        picker.backgroundColor = .white
+        picker.viewBorderWidth = 0.5
+        picker.viewBorderColor = .paleGreyTwo
         return picker
     }()
     
@@ -78,19 +81,10 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             selectedItem = itemsToShow[0]
         }
         pickerView.reloadAllComponents()
-//        selectedButton.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-    
-    @objc private func dismissMe() {
-        dismiss(animated: true, completion: nil)
-//        if let selectedItem = selectedItem, selectedItem != currentValue {
-//            //print(currentValue)
-//            delegate?.result(name: selectedItem)
-//        }
     }
     
     override func viewDidLoad() {
@@ -103,15 +97,9 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let dismissGeasture = UITapGestureRecognizer(target: self, action: #selector(dismissMePlease))
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(dismissGeasture)
-        
-//        view.addSubview(selectedButton)
-//        view.ActivateConstraint([
-//            selectedButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-//            selectedButton.heightAnchor.constraint(equalToConstant: 50),
-//            selectedButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            selectedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -9)
-//            ])
-//        pickerView.backgroundColor = .w
+    
+        pickerView.backgroundColor = .white
+//        pickerView.alignmentRectInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         view.addSubview(pickerView)
         view.ActivateConstraint([
             pickerView.widthAnchor.constraint(equalTo: view.widthAnchor),

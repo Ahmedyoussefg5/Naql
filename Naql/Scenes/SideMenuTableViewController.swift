@@ -72,6 +72,14 @@ class SideMenuTableViewController: UITableViewController {
             navigationController?.pushViewController(MyRequestsViewController(), animated: true)
         case 2:
             navigationController?.pushViewController(IncomeRequestsViewController(), animated: true)
+        case 3:
+            navigationController?.pushViewController(AccountStatementViewController(), animated: true)
+        case 4:
+            navigationController?.pushViewController(PaymentProveViewController(), animated: true)
+        case 6:
+            navigationController?.pushViewController(BankAccountsViewController(), animated: true)
+        case 7:
+            navigationController?.pushViewController(PaymentViewController(), animated: true)
         default:
             return
         }

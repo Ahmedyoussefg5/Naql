@@ -28,7 +28,7 @@ extension UIButton {
             imageView.widthAnchor.constraint(equalToConstant: width),
             imageView.heightAnchor.constraint(equalToConstant: hight),
             imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5)
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10)
             ])
     }    
 }

@@ -16,18 +16,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         txt.translatesAutoresizingMaskIntoConstraints = false
         return txt
     }()
-    lazy var newRequestButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.setTitle("طلب جديد", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
-        btn.titleLabel?.font = .CairoSemiBold(of: 15)
-        btn.layer.cornerRadius = 15
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTheTarget(action: {[weak self] in
-            self?.goToNewRequestsViewController()
-        })
-        return btn
-    }()
+
     lazy var locationButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.imageForNormal = #imageLiteral(resourceName: "locationred").withRenderingMode(.alwaysOriginal)
@@ -46,7 +35,19 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         gradientLayer.cornerRadius = 15
         return gradientLayer
     }()
-    
+    lazy var newRequestButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("طلب جديد", for: .normal)
+        btn.setTitleColor(.white, for: .normal)
+        btn.titleLabel?.font = .CairoSemiBold(of: 15)
+        btn.layer.cornerRadius = 15
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.layer.insertSublayer(gradientLayer, at: 0)
+        btn.addTheTarget(action: {[weak self] in
+            self?.goToNewRequestsViewController()
+        })
+        return btn
+    }()
     var long = 0.00
     var lat = 0.00
     
@@ -54,7 +55,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         mapView.delegate = self
         view.backgroundColor = .white
-        newRequestButton.layer.insertSublayer(gradientLayer, at: 0)
         setStatusBarBackgroundColor(colors: [#colorLiteral(red: 0.6906743646, green: 0.05539446324, blue: 0.05300607532, alpha: 1), #colorLiteral(red: 0.5739542246, green: 0.1024537459, blue: 0.06843120605, alpha: 1)])
         setupLayout()
         addAnnotation()

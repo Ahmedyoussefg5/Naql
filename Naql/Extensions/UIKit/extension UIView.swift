@@ -207,6 +207,10 @@ extension UIView {
         }
     }
     
+    func applySketchShadow() {
+        layer.applySketchShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.19), alpha: 1, x: 0, y: 3, blur: 2, spread: 0)
+    }
+    
     var viewBorderColor: UIColor {
         get {
             return UIColor(cgColor: layer.borderColor ?? UIColor.clear.cgColor)

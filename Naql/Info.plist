@@ -46,5 +46,7 @@
 		<string>Cairo-Regular.ttf</string>
 		<string>Cairo-SemiBold.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Naql Need To Access Your Photos To Pick Picture</string>
 </dict>
 </plist>
