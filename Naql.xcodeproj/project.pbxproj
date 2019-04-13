@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7961D5053F4CC408735F6DFF /* Pods_Naql.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB2AA60A1C4DA49E79DA83B /* Pods_Naql.framework */; };
+		E8015CFB225F4F2300E72B3E /* MyOffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8015CFA225F4F2300E72B3E /* MyOffersCell.swift */; };
+		E8015CFE225F504F00E72B3E /* RequestPriceOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8015CFD225F4FAC00E72B3E /* RequestPriceOfferViewController.swift */; };
 		E81ABFB0225CC1620016ACF6 /* MyRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFAF225CC1620016ACF6 /* MyRequestsViewController.swift */; };
 		E81ABFB2225CC1780016ACF6 /* MyRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFB1225CC1780016ACF6 /* MyRequestsView.swift */; };
 		E81ABFB4225CC5380016ACF6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81ABFB3225CC5380016ACF6 /* Constants.swift */; };
@@ -76,6 +78,9 @@
 		2CB2AA60A1C4DA49E79DA83B /* Pods_Naql.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Naql.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A82E07DCCBE653F223B1A3 /* Pods-Naql.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Naql.release.xcconfig"; path = "Pods/Target Support Files/Pods-Naql/Pods-Naql.release.xcconfig"; sourceTree = "<group>"; };
 		B7B2F35D3B85A31042015E7E /* Pods-Naql.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Naql.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Naql/Pods-Naql.debug.xcconfig"; sourceTree = "<group>"; };
+		E8015CFA225F4F2300E72B3E /* MyOffersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOffersCell.swift; sourceTree = "<group>"; };
+		E8015CFC225F4FAC00E72B3E /* RequestPriceOfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPriceOfferView.swift; sourceTree = "<group>"; };
+		E8015CFD225F4FAC00E72B3E /* RequestPriceOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPriceOfferViewController.swift; sourceTree = "<group>"; };
 		E81ABFAF225CC1620016ACF6 /* MyRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestsViewController.swift; sourceTree = "<group>"; };
 		E81ABFB1225CC1780016ACF6 /* MyRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestsView.swift; sourceTree = "<group>"; };
 		E81ABFB3225CC5380016ACF6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -178,6 +183,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E8015CF8225F38AC00E72B3E /* DriversOffers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DriversOffers;
+			sourceTree = "<group>";
+		};
+		E8015CF9225F4EF900E72B3E /* RequestPriceOffer */ = {
+			isa = PBXGroup;
+			children = (
+				E8015CFC225F4FAC00E72B3E /* RequestPriceOfferView.swift */,
+				E8015CFD225F4FAC00E72B3E /* RequestPriceOfferViewController.swift */,
+			);
+			path = RequestPriceOffer;
+			sourceTree = "<group>";
+		};
 		E81ABFAE225CC1360016ACF6 /* MyRequests */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +245,7 @@
 		E81ABFCB225E12950016ACF6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E8015CFA225F4F2300E72B3E /* MyOffersCell.swift */,
 				E81ABFCC225E12A90016ACF6 /* MyRequestsTableCell.swift */,
 			);
 			path = Cell;
@@ -381,6 +403,8 @@
 		E8BC9831225AE36A00C52EC5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E8015CF9225F4EF900E72B3E /* RequestPriceOffer */,
+				E8015CF8225F38AC00E72B3E /* DriversOffers */,
 				E81ABFD7225E3F9E0016ACF6 /* Payment */,
 				E81ABFD4225E3A580016ACF6 /* BankAccounts */,
 				E81ABFCE225E2CBB0016ACF6 /* PaymentProve */,
@@ -579,8 +603,10 @@
 				E81ABFB0225CC1620016ACF6 /* MyRequestsViewController.swift in Sources */,
 				E8FE7831225B53E1008CFF87 /* NewRequestsViewController.swift in Sources */,
 				E89E9B6B225CA75C00984908 /* DLAppDelegate.m in Sources */,
+				E8015CFB225F4F2300E72B3E /* MyOffersCell.swift in Sources */,
 				E89E9B66225C90B000984908 /* NewRequestView.swift in Sources */,
 				E8BC9807225AC0D000C52EC5 /* extension+Gradient.swift in Sources */,
+				E8015CFE225F504F00E72B3E /* RequestPriceOfferViewController.swift in Sources */,
 				E81ABFCA225E12820016ACF6 /* AccountStatementViewController.swift in Sources */,
 				E8BC9840225AE3C800C52EC5 /* extension CALayer.swift in Sources */,
 				E8BC9809225ADCC500C52EC5 /* SideMenuTableViewController.swift in Sources */,

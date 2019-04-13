@@ -220,7 +220,7 @@ extension UIView {
     @discardableResult
     func heightAnchorWithMultiplier(multiplier: CGFloat) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let consWidth = widthAnchor.constraint(equalTo: (superview?.heightAnchor)!, multiplier: multiplier)
+        let consWidth = heightAnchor.constraint(equalTo: (superview?.heightAnchor)!, multiplier: multiplier)
         consWidth.isActive = true
         return consWidth
     }
@@ -233,6 +233,30 @@ extension UIView {
         return consWidth
     }
     
+    @discardableResult
+    func bottomAnchorSuperView(constant: CGFloat) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let consWidth = bottomAnchor.constraint(equalTo: (superview?.bottomAnchor)!, constant: constant)
+        consWidth.isActive = true
+        return consWidth
+    }
+    
+    @discardableResult
+    func leadingAnchorSuperView(constant: CGFloat) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = leadingAnchor.constraint(equalTo: (superview?.leadingAnchor)!, constant: constant)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @discardableResult
+    func trailingAnchorAnchorSuperView(constant: CGFloat) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = trailingAnchor.constraint(equalTo: (superview?.trailingAnchor)!, constant: constant)
+        constraint.isActive = true
+        return constraint
+    }
+
     @discardableResult
     func heightAnchorConstant(constant: CGFloat) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false

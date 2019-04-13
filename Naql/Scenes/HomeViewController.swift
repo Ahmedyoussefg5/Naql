@@ -35,16 +35,47 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         gradientLayer.cornerRadius = 15
         return gradientLayer
     }()
+    lazy var gradientLayerRed: LinearGradientLayer = {
+        let gradientLayer = LinearGradientLayer(colors: [#colorLiteral(red: 0.8347420096, green: 0.1139526293, blue: 0.1157940701, alpha: 1), #colorLiteral(red: 0.6309103966, green: 0.1291202009, blue: 0.1118160859, alpha: 1)])
+        gradientLayer.direction = .bottomLeftToTopRight
+        gradientLayer.cornerRadius = 15
+        return gradientLayer
+    }()
     lazy var newRequestButton: UIButton = {
         let btn = UIButton(type: .system)
-        btn.setTitle("طلب جديد", for: .normal)
+        if userType == .driver {
+            btn.setTitle("طلب جديد", for: .normal)
+        } else if userType == .commercial {
+            btn.setTitle("طلب عرض اسعار", for: .normal)
+        }
         btn.setTitleColor(.white, for: .normal)
         btn.titleLabel?.font = .CairoSemiBold(of: 15)
         btn.layer.cornerRadius = 15
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.layer.insertSublayer(gradientLayer, at: 0)
         btn.addTheTarget(action: {[weak self] in
-            self?.goToNewRequestsViewController()
+            if userType == .driver {
+                self?.goToNewRequestsViewController()
+            } else if userType == .commercial {
+                self?.goToRequestPriceOfferViewController()
+            }
+        })
+        return btn
+    }()
+    lazy var newRequestRedButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("طلب جديد", for: .normal)
+        btn.setTitleColor(.white, for: .normal)
+        btn.titleLabel?.font = .CairoSemiBold(of: 15)
+        btn.layer.cornerRadius = 15
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.layer.insertSublayer(gradientLayerRed, at: 0)
+        btn.addTheTarget(action: {[weak self] in
+            if userType == .driver {
+                self?.goToNewRequestsViewController()
+            } else if userType == .commercial {
+                self?.goToRequestPriceOfferViewController()
+            }
         })
         return btn
     }()
@@ -65,18 +96,36 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradientLayer.frame = newRequestButton.bounds
+        gradientLayerRed.frame = newRequestRedButton.bounds
     }
     
     fileprivate func setupLayout() {
         view.addSubview(mapView)
         mapView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .zero)
-        view.addSubview(newRequestButton)
-        view.ActivateConstraint([
-            newRequestButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
-            newRequestButton.heightAnchor.constraint(equalToConstant: 40),
-            newRequestButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            newRequestButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
-            ])
+        
+        if userType == .driver {
+            view.addSubview(newRequestButton)
+            view.ActivateConstraint([
+                newRequestButton.heightAnchor.constraint(equalToConstant: 40),
+                newRequestButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                newRequestButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
+                newRequestButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9)
+                ])
+        } else if userType == .commercial {
+            view.addSubview(newRequestButton)
+            view.addSubview(newRequestRedButton)
+            view.ActivateConstraint([
+                newRequestButton.heightAnchor.constraint(equalToConstant: 40),
+                newRequestButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                newRequestButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
+                newRequestButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
+                newRequestRedButton.heightAnchor.constraint(equalToConstant: 40),
+                newRequestRedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+                newRequestRedButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
+                newRequestRedButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
+                ])
+        }
+        
         view.addSubview(locationButton)
         view.ActivateConstraint([
             locationButton.widthAnchor.constraint(equalToConstant: 30),
@@ -88,6 +137,10 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
     
     private func goToNewRequestsViewController() {
         navigationController?.pushViewController(NewRequestsViewController(), animated: true)
+    }
+    
+    private func goToRequestPriceOfferViewController() {
+        navigationController?.pushViewController(RequestPriceOfferViewController(), animated: true)
     }
     
     fileprivate func addAnnotation() {

@@ -15,12 +15,15 @@ class IncomeRequestsViewController: UIViewController {
         tableV.separatorColor = .clear
         tableV.delegate = self
         tableV.dataSource = self
-        tableV.register(MyRequestsCell.self, forCellReuseIdentifier: "IncomeRequests")
+        if userType == .driver {
+            tableV.register(MyRequestsCell.self, forCellReuseIdentifier: "IncomeRequests")
+        } else if userType == .commercial {
+            tableV.register(MyOffersCell.self, forCellReuseIdentifier: "IncomeRequests")
+        }
         return tableV
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBarApperance(title: "طلبات العمل", showNotifButton: false)
         view.backgroundColor = .white
         view.addSubview(mainTableView)
         mainTableView.fillSuperview()
@@ -32,12 +35,18 @@ extension IncomeRequestsViewController: UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IncomeRequests", for: indexPath) as! MyRequestsCell
-        return cell
+        if userType == .driver {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IncomeRequests", for: indexPath) as! MyRequestsCell
+            return cell
+        } else if userType == .commercial {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IncomeRequests", for: indexPath) as! MyOffersCell
+            return cell
+        }
+        fatalError()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 200
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

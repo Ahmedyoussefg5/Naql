@@ -26,9 +26,15 @@ class SideMenuTableViewController: UITableViewController {
         super.viewDidLoad()
         tableConfiger()
         navigationController?.setNavigationBarHidden(true, animated: true)
+        if userType == .driver {
+            tableViewItems = ["الرئسية", "طلباتي", "طلبات العمل", "كشف الحساب", "اثبات الدفع", "ادارة الحساب", "الحسابات البنكية", "سداد", "بريد"]
+        } else if userType == .commercial {
+            tableViewItems = ["الرئسية", "طلباتي", "عروض السائقين", "كشف الحساب", "اثبات الدفع", "ادارة الحساب", "الحسابات البنكية", "سداد", "بريد"]
+        }
+        tableView.reloadData()
     }
     
-    let tableViewItems = ["الرئسية", "طلباتي", "طلبات العمل", "كشف الحساب", "اثبات الدفع", "ادارة الحساب", "الحسابات البنكية", "سداد", "بريد"]
+    var tableViewItems = [String]()
     
     // MARK: - Table view data source
     
@@ -71,7 +77,9 @@ class SideMenuTableViewController: UITableViewController {
         case 1:
             navigationController?.pushViewController(MyRequestsViewController(), animated: true)
         case 2:
-            navigationController?.pushViewController(IncomeRequestsViewController(), animated: true)
+            let vc = IncomeRequestsViewController()
+            vc.setupNavBarApperance(title: tableViewItems[indexPath.row], showNotifButton: false)
+            navigationController?.pushViewController(vc, animated: true)
         case 3:
             navigationController?.pushViewController(AccountStatementViewController(), animated: true)
         case 4:

@@ -196,6 +196,10 @@ public extension UIButton {
         states.forEach { setTitle(title, for: $0) }
     }
     
+    public func setTitleForNormalState(_ title: String) {
+         setTitle(title, for: .normal)
+    }
+
     /// Center align title text and image on UIButton
     ///
     /// - Parameter spacing: spacing between UIButton title text and UIButton Image.
